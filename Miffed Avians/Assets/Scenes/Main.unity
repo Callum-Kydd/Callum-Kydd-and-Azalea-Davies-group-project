@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 532522059}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   jump_force: 300
   speed: 0
-  ground: {fileID: 0}
+  Ground: {fileID: 0}
 --- !u!135 &1293657184
 SphereCollider:
   m_ObjectHideFlags: 0

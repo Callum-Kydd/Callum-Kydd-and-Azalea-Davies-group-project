@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     public float jump_force;
     public float speed;
-    public GameObject ground;
+    public GameObject Ground;
     private Rigidbody rb;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject == ground)
+        if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true;
         }
