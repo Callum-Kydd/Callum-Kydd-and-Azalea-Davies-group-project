@@ -1,4 +1,8 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -7,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed;
     public GameObject Ground;
     private Rigidbody rb;
+    private float movementX;
+    private float movementY;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,14 +21,27 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canJump) { 
-            rb.AddForce(0, jump_force, 0);
+        
+        movementX = Input.GetAxis("Horizontal");
+        movementY = Input.GetAxis("Vertical");    
+
+        if (Input.GetKeyDown(KeyCode.Space) && canJump)
+        {
+            rb.AddForce(Vector3.up * jump_force, ForceMode.Impulse);
             canJump = false;
         }
     }
+
+
+        void FixedUpdate()
+    {
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
+        rb.AddForce(movement * speed);
+    }
+   
+    
 
     private void OnCollisionEnter(Collision collision)
     {
