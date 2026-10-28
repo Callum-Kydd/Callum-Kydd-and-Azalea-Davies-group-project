@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump;
     public float jump_force;
     public float speed;
-    public GameObject Ground;
     private Rigidbody rb;
     private float movementX;
     private float movementY;
@@ -38,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        rb.AddForce(movement * speed);
+        transform.Translate(movement * speed * Time.deltaTime);
     }
    
     
