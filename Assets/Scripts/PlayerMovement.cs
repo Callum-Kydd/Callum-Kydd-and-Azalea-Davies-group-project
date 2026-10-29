@@ -12,10 +12,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private float movementX;
     private float movementY;
+    public Transform orientation;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        
         rb = GetComponent<Rigidbody>();
         canJump = true;
     }
@@ -36,8 +38,14 @@ public class PlayerMovement : MonoBehaviour
 
         void FixedUpdate()
     {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);
-        transform.Translate(movement * speed * Time.deltaTime);
+        Vector3 forward = orientation.forward;
+        Vector3 right = orientation.right;
+        forward.y = 0f;
+        right.y = 0f;
+        forward.Normalize();
+        right.Normalize();
+        Vector3 movement = (forward * movementY) + (right * movementX);
+        transform.Translate(movement * speed * Time.fixedDeltaTime, Space.World);
     }
    
     
