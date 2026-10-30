@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform orientation;
     private Vector3 forward;
     private Vector3 right;
+    public GameObject slingshot;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (!inSlingshot && !firing) {
+        if (!inSlingshot) {
             movementX = Input.GetAxis("Horizontal");
             movementY = Input.GetAxis("Vertical");
 
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 canJump = false;
             }
         }
-        else if (inSlingshot && !firing)
+        else if (inSlingshot)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -67,10 +68,15 @@ public class PlayerMovement : MonoBehaviour
             right.Normalize();
         }
         Vector3 movement = (forward * movementY) + (right * movementX);
-        transform.Translate(movement * speed * Time.fixedDeltaTime, Space.World);
+        if (!firing)
+        {
+            transform.Translate(movement * speed * Time.fixedDeltaTime, Space.World);
+        }
+        else
+        {
+            rb.AddForce(movement * speed);
+        }
     }
-   
-    
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -79,17 +85,21 @@ public class PlayerMovement : MonoBehaviour
             canJump = true;
             firing = false;
         }
+
         if (collision.gameObject.CompareTag("Slingshot"))
         {
             canJump = false;
             inSlingshot = true;
             movementX = 0f;
             movementY = 0f;
-            transform.position = new Vector3(-3.002f, 1f, 4.355f);
-            if (!firing)
-            {
-                rb.useGravity = false;
-            }
+            transform.position = slingshot.transform.position + new Vector3(-1.75f, 1.5f, 0f);
+            firing = false;
+            rb.useGravity = false;
+        }
+
+        if (collision.gameObject.CompareTag("Enemy Platform"))
+        {
+            transform.position = new Vector3(0f, 0.5f, 0f);
         }
     }
 }

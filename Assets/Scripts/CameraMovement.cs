@@ -15,6 +15,7 @@ public class CameraMovement : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        orientation.rotation = Quaternion.Euler(Xrotation, Yrotation, 0);
     }
 
     // Update is called once per frame
@@ -26,6 +27,6 @@ public class CameraMovement : MonoBehaviour
         Xrotation -= mouseY;
         Xrotation = Mathf.Clamp(Xrotation, -90f, 90f);
         transform.rotation = Quaternion.Euler(Xrotation, Yrotation, 0);
-        orientation.rotation = Quaternion.Euler(0, Yrotation, 0);
+        orientation.rotation = Quaternion.Euler(Xrotation, Yrotation, 0);
     }
 }
