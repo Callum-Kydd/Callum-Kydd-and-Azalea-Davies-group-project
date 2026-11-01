@@ -1,6 +1,7 @@
 using NUnit.Framework.Internal.Filters;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 forward;
     private Vector3 right;
     public GameObject slingshot;
+    public int score;
+    public TMP_Text score_ui;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -29,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
         inSlingshot = false;
         firing = false;
+        score = 0;
+        score_ui.text = "Score: 0";
     }
 
     void Update()
@@ -53,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
                 firing = true;
             }
         }
+        score_ui.text = $"Score: {score}";
     }
 
 

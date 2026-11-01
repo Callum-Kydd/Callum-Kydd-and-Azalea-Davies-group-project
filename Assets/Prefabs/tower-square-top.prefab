@@ -62,6 +62,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e544904eb89a984ba6a6690390abd6f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 700315407546282722}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7e544904eb89a984ba6a6690390abd6f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8456194304865661632}
   m_SourcePrefab: {fileID: 100100000, guid: 7e544904eb89a984ba6a6690390abd6f, type: 3}
 --- !u!1 &5718282325519405889 stripped
 GameObject:
@@ -117,3 +120,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8456194304865661632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5718282325519405889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4083d46ac82931d4d9297fbd870826c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  player: {fileID: 0}
+  player_script: {fileID: 0}
+  value: 1
