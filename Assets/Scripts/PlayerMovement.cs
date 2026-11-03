@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        score_ui.text = $"Score: {score}";
+        
     }
 
 

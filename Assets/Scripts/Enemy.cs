@@ -5,10 +5,12 @@ public class Enemy : MonoBehaviour
     public GameObject player;
     public PlayerMovement player_script;
     public int value;
+    public Score scoreScript;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        scoreScript = FindAnyObjectByType<Score>();
         player_script = player.GetComponent<PlayerMovement>();
     }
 
@@ -22,8 +24,12 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
+            scoreScript.score += 1;
             Destroy(gameObject);
-            player_script.score += value;
+            
+
+
+
         }
     }
 }
