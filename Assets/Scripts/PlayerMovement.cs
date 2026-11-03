@@ -23,6 +23,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject slingshot;
     public int score;
     public TMP_Text score_ui;
+    public Score scoreScript;
+    public float collisionCooldown = 0.5f;
+    private float collisionTimer = 0f;
+    private bool collisionsEnabled = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -56,8 +60,21 @@ public class PlayerMovement : MonoBehaviour
                 rb.useGravity = true;
                 inSlingshot = false;
                 firing = true;
+                collisionsEnabled = false;
+                collisionTimer = collisionCooldown;
             }
         }
+
+        if (!collisionsEnabled)
+        {
+            collisionTimer -= Time.deltaTime;
+
+            if (collisionTimer <= 0f)
+            {
+                collisionsEnabled = true;
+            }
+        }
+
         score_ui.text = $"Score: {score}";
     }
 
@@ -86,6 +103,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+
+        if (!collisionsEnabled)
+        {
+            return;
+        }
+
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true;
@@ -106,6 +129,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy Platform"))
         {
             transform.position = new Vector3(0f, 0.5f, 0f);
+        }
+
+        if (collision.gameObject.CompareTag("Tower"))
+        {
+            scoreScript.score = scoreScript.score + 1;
         }
     }
 }
