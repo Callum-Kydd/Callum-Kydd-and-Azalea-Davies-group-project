@@ -577,6 +577,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 39611085408526465, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 173276844311125110, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player
       value: 
@@ -593,6 +597,18 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 693004401737253761, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 701505783404469976, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 978218263868434418, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 1100616415391548670, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player
       value: 
@@ -617,11 +633,19 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 2016286387492946910, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 2194370294720663872, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: m_Name
       value: Tower Variant 2
       objectReference: {fileID: 0}
     - target: {fileID: 2194370294720663872, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2527183778708383651, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: m_TagString
       value: Tower
       objectReference: {fileID: 0}
@@ -641,6 +665,10 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 2637731231880966057, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 2838148600005549150, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player
       value: 
@@ -689,6 +717,10 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 3898384586312618622, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 5126204626343053147, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player
       value: 
@@ -705,6 +737,10 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 5411823752751532459, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 6228098943525483178, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player
       value: 
@@ -721,6 +757,14 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 6347981652461048015, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 6603708079828456252, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 6751449403931879899, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
@@ -769,6 +813,10 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 7316187559447361552, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     - target: {fileID: 7444126421031365366, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player
       value: 
@@ -817,6 +865,10 @@ PrefabInstance:
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
+    - target: {fileID: 8751674767070413660, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: m_TagString
+      value: Tower
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1576,6 +1628,7 @@ GameObject:
   - component: {fileID: 1129438537}
   - component: {fileID: 1129438536}
   - component: {fileID: 1129438535}
+  - component: {fileID: 1129438538}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -1702,6 +1755,20 @@ RectTransform:
   m_AnchoredPosition: {x: 550, y: -252}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1129438538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129438534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6857ec77791b0f842bec18547742976b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Score
+  scoreText: {fileID: 0}
+  score: 0
 --- !u!1 &1220204716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 701505783404469976, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
@@ -1722,6 +1789,7 @@ MonoBehaviour:
   player: {fileID: 1293657182}
   player_script: {fileID: 1293657183}
   value: 5
+  scoreScript: {fileID: 0}
 --- !u!1 &1234231881
 GameObject:
   m_ObjectHideFlags: 0
