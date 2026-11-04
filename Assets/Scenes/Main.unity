@@ -1756,7 +1756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '10 '
+  m_text: if this text shows up then the score isn't working
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1868,7 +1868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Score
   scoreText: {fileID: 1129438535}
-  score: 0
+  score: 9999
 --- !u!1 &1220204716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 701505783404469976, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}

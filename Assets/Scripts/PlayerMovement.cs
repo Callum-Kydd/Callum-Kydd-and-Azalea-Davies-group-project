@@ -70,9 +70,6 @@ public class PlayerMovement : MonoBehaviour
                 collisionsEnabled = true;
             }
         }
-
-        Debug.Log("inSlingshot" + inSlingshot);
-        Debug.Log("firing" + firing);
     }
 
 
@@ -106,7 +103,6 @@ public class PlayerMovement : MonoBehaviour
             firing = false;
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-            Debug.Log("!hit ground");
         }
 
         if (collision.gameObject.CompareTag("Slingshot") && collisionsEnabled)
@@ -127,11 +123,6 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(0f, 0.5f, 0f);
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
-        }
-
-        if (collision.gameObject.CompareTag("Tower"))
-        {
-            scoreScript.score = scoreScript.score + 1;
         }
     }
 }
