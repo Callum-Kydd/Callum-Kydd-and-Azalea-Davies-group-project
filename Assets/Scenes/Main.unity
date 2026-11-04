@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3302856}
   m_Layer: 0
   m_Name: Wall1
-  m_TagString: Untagged
+  m_TagString: Enemy Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -166,7 +166,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3302855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -225,8 +225,8 @@ Transform:
   m_GameObject: {fileID: 3302855}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 20}
+  m_LocalPosition: {x: 100, y: -0, z: 0}
+  m_LocalScale: {x: 10, y: 500, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -287,6 +287,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 3211346833487601147, guid: a25c911115cb58046bd13967454670bb, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 3211346833487601147, guid: a25c911115cb58046bd13967454670bb, type: 3}
       propertyPath: player_script
       value: 
@@ -413,7 +417,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6857ec77791b0f842bec18547742976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  scoreText: {fileID: 1129438535}
+  scoreText: {fileID: 0}
   score: 0
 --- !u!1 &330585543
 GameObject:
@@ -586,6 +590,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 173276844311125110, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 173276844311125110, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -593,6 +601,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 526828139452677538, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 526828139452677538, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -614,6 +626,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 1100616415391548670, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 1100616415391548670, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -621,6 +637,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 1231081543318139797, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 1231081543318139797, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -629,6 +649,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 1680597167653424551, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 1680597167653424551, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -654,6 +678,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 2592167902186507182, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 2592167902186507182, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -661,6 +689,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 2626197979254637123, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 2626197979254637123, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -674,6 +706,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 2838148600005549150, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 2838148600005549150, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -681,6 +717,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 3269772637139099971, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 3269772637139099971, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -689,6 +729,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 3402727303144593593, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 3402727303144593593, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -697,6 +741,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 3627110164285345167, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 3627110164285345167, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -705,6 +753,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 3730258620939658229, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 3730258620939658229, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -713,6 +765,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 3897693096124580380, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 3897693096124580380, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -726,6 +782,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 5126204626343053147, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 5126204626343053147, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -733,6 +793,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 5170565025655600267, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 5170565025655600267, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -746,6 +810,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 6228098943525483178, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 6228098943525483178, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -753,6 +821,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 6331089247172396174, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 6331089247172396174, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -810,6 +882,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 6973717779879928572, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 6973717779879928572, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -822,6 +898,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1293657182}
     - target: {fileID: 7444126421031365366, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
+    - target: {fileID: 7444126421031365366, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
       objectReference: {fileID: 1293657183}
@@ -829,6 +909,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 8234090760461606699, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 8234090760461606699, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -837,6 +921,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 8275425209623561382, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 8275425209623561382, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -845,6 +933,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 8316492370774274690, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 8316492370774274690, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -853,6 +945,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 8499600225229721869, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 8499600225229721869, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -861,6 +957,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1293657182}
+    - target: {fileID: 8642414676826285426, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+      propertyPath: scoreScript
+      value: 
+      objectReference: {fileID: 1129438538}
     - target: {fileID: 8642414676826285426, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
       propertyPath: player_script
       value: 
@@ -1248,7 +1348,7 @@ GameObject:
   - component: {fileID: 630515635}
   m_Layer: 0
   m_Name: Wall2
-  m_TagString: Untagged
+  m_TagString: Enemy Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1281,7 +1381,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630515634}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1340,8 +1440,8 @@ Transform:
   m_GameObject: {fileID: 630515634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -0, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 20}
+  m_LocalPosition: {x: -100, y: -0, z: 0}
+  m_LocalScale: {x: 10, y: 500, z: 500}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1360,7 +1460,7 @@ GameObject:
   - component: {fileID: 668196363}
   m_Layer: 0
   m_Name: Wall2 (2)
-  m_TagString: Untagged
+  m_TagString: Enemy Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1393,7 +1493,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668196362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1452,8 +1552,8 @@ Transform:
   m_GameObject: {fileID: 668196362}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -0, z: -10}
-  m_LocalScale: {x: 30, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: -0, z: -100}
+  m_LocalScale: {x: 500, y: 500, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1789,7 +1889,7 @@ MonoBehaviour:
   player: {fileID: 1293657182}
   player_script: {fileID: 1293657183}
   value: 5
-  scoreScript: {fileID: 0}
+  scoreScript: {fileID: 1129438538}
 --- !u!1 &1234231881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,7 +1904,7 @@ GameObject:
   - component: {fileID: 1234231882}
   m_Layer: 0
   m_Name: Wall2 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1837,7 +1937,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234231881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1896,8 +1996,8 @@ Transform:
   m_GameObject: {fileID: 1234231881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: -0, z: 10}
-  m_LocalScale: {x: 30, y: 10, z: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 100}
+  m_LocalScale: {x: 500, y: 500, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1940,8 +2040,6 @@ MonoBehaviour:
   slingshot_force: 3000
   orientation: {fileID: 702730604}
   slingshot: {fileID: 513768797}
-  score: 0
-  score_ui: {fileID: 0}
   scoreScript: {fileID: 0}
   collisionCooldown: 0.5
 --- !u!54 &1293657185

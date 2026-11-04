@@ -21,8 +21,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 forward;
     private Vector3 right;
     public GameObject slingshot;
-    public int score;
-    public TMP_Text score_ui;
     public Score scoreScript;
     public float collisionCooldown = 0.5f;
     private float collisionTimer = 0f;
@@ -36,8 +34,6 @@ public class PlayerMovement : MonoBehaviour
         canJump = true;
         inSlingshot = false;
         firing = false;
-        score = 0;
-        score_ui.text = "Score: 0";
     }
 
     void Update()
@@ -75,7 +71,8 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        
+        Debug.Log("inSlingshot" + inSlingshot);
+        Debug.Log("firing" + firing);
     }
 
 
@@ -103,25 +100,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-
-        if (!collisionsEnabled)
-        {
-            return;
-        }
-
         if (collision.gameObject.CompareTag("Ground"))
         {
             canJump = true;
             firing = false;
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            Debug.Log("!hit ground");
         }
 
-        if (collision.gameObject.CompareTag("Slingshot"))
+        if (collision.gameObject.CompareTag("Slingshot") && collisionsEnabled)
         {
             canJump = false;
             inSlingshot = true;
             movementX = 0f;
             movementY = 0f;
             transform.position = slingshot.transform.position + new Vector3(-1.75f, 1.5f, 0f);
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
             firing = false;
             rb.useGravity = false;
         }
@@ -129,6 +125,8 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy Platform"))
         {
             transform.position = new Vector3(0f, 0.5f, 0f);
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
 
         if (collision.gameObject.CompareTag("Tower"))

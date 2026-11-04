@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            scoreScript.score += 1;
+            scoreScript.score += value;
             Destroy(gameObject);
             
 
