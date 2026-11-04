@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6857ec77791b0f842bec18547742976b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Score
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 1129438535}
   score: 0
 --- !u!1 &1220204716 stripped
 GameObject:
