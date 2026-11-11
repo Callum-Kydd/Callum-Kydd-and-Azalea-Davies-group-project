@@ -2279,6 +2279,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelSystem
   shotsFired: 0
   towerPiecesLeft: 0
+  spawnDelay: 60
+  failTime: 180
+  failTimer: 0
+  incrementFailTimer: 0
 --- !u!1 &2056386319
 GameObject:
   m_ObjectHideFlags: 0
