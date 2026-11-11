@@ -10,17 +10,18 @@ public class CameraMovement : MonoBehaviour
 
     float Xrotation;
     float Yrotation;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     private void Start()
     {
+        // lock the cursor and make it invisible
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         orientation.rotation = Quaternion.Euler(Xrotation, Yrotation, 0);
     }
 
-    // Update is called once per frame
     private void Update()
     {
+        // set camera rotation based on mouse position
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
         Yrotation += mouseX;

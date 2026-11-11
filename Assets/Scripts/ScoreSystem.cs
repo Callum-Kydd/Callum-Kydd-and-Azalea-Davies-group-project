@@ -1,13 +1,14 @@
 using UnityEngine;
 using TMPro;
 
-public class Score : MonoBehaviour
+public class ScoreSystem : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public int score;
     
     void Start()
     {
+        // initialise the score text
         score = 0;
         scoreText.text = score.ToString() + " Score";
     }
@@ -15,7 +16,7 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // update the score text to reflect current score
         scoreText.text = score.ToString() + " Score";
-        Debug.Log(score);
     }
 }
