@@ -423,6 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   scoreText: {fileID: 1129438535}
   score: 0
+  level: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1817,6 +1818,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1029206240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029206241}
+  m_Layer: 0
+  m_Name: TowerSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029206241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029206240}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10, y: 9.61, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1129438534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1969,6 +2001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Score
   scoreText: {fileID: 1129438535}
   score: 0
+  level: 0
 --- !u!1 &1220204716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 701505783404469976, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
@@ -2283,6 +2316,9 @@ MonoBehaviour:
   failTime: 180
   failTimer: 0
   incrementFailTimer: 0
+  level: 1
+  towerPrefab: {fileID: 2194370294720663872, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
+  towerSpawnPoint: {fileID: 1029206241}
 --- !u!1 &2056386319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,3 +2490,4 @@ SceneRoots:
   - {fileID: 668196366}
   - {fileID: 760157021}
   - {fileID: 290820955}
+  - {fileID: 1029206241}

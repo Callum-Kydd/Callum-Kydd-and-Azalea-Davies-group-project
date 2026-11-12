@@ -5,12 +5,14 @@ public class ScoreSystem : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     public int score;
+    public int level;
     
     void Start()
     {
         // initialise the score text
         score = 0;
         scoreText.text = score.ToString() + " Score";
+        
     }
 
     // Update is called once per frame
@@ -18,5 +20,6 @@ public class ScoreSystem : MonoBehaviour
     {
         // update the score text to reflect current score
         scoreText.text = score.ToString() + " Score";
+        
     }
 }

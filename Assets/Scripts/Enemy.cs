@@ -7,10 +7,15 @@ public class Enemy : MonoBehaviour
     public ScoreSystem scoreScript;
     public LevelSystem levelScript;
     private bool excludedFromTower;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //prefabs cant hold references, so I find them here at runtime 
+        if (levelScript == null) levelScript = FindFirstObjectByType<LevelSystem>();
+        if (scoreScript == null) scoreScript = FindFirstObjectByType<ScoreSystem>();
+
         levelScript.towerPiecesLeft++;
     }
 
