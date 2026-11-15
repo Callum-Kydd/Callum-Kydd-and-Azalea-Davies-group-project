@@ -13,6 +13,7 @@ public class ScoreSystem : MonoBehaviour
         score = 0;
         scoreText.text = score.ToString() + " Score";
         
+        
     }
 
     // Update is called once per frame
@@ -20,6 +21,7 @@ public class ScoreSystem : MonoBehaviour
     {
         // update the score text to reflect current score
         scoreText.text = score.ToString() + " Score";
+        
         
     }
 }

@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour
 {
     public int value;
     public ScoreSystem scoreScript;
+    public HighScoreSystem highscoreScript;
     public LevelSystem levelScript;
     private bool excludedFromTower;
     
@@ -15,6 +16,7 @@ public class Enemy : MonoBehaviour
         //prefabs cant hold references, so I find them here at runtime 
         if (levelScript == null) levelScript = FindFirstObjectByType<LevelSystem>();
         if (scoreScript == null) scoreScript = FindFirstObjectByType<ScoreSystem>();
+        
 
         levelScript.towerPiecesLeft++;
     }
@@ -34,6 +36,11 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             scoreScript.score += value;
+            if (scoreScript.score > Highscore.highscore)
+            {
+                Highscore.highscore = scoreScript.score;
+            }
+                
             Destroy(gameObject);
             if (!excludedFromTower)
             {
