@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 forward;
     private Vector3 right;
     public GameObject slingshot;
-    public Score scoreScript;
+    public ScoreSystem scoreScript;
+    public LevelSystem levelScript;
     public float collisionCooldown = 0.5f;
     private float collisionTimer = 0f;
     private bool collisionsEnabled = true;
@@ -61,11 +62,9 @@ public class PlayerMovement : MonoBehaviour
                 firing = true;
                 collisionsEnabled = false;
                 collisionTimer = collisionCooldown;
-<<<<<<< Updated upstream
-=======
                 levelScript.shotsFired++;
+                levelScript.failTimer = 0;
                 levelScript.incrementFailTimer = false;
->>>>>>> Stashed changes
             }
         }
 
@@ -113,9 +112,10 @@ public class PlayerMovement : MonoBehaviour
             firing = false;
             rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
+            levelScript.incrementFailTimer = true;
         }
 
-        if (collision.gameObject.CompareTag("Slingshot") && collisionsEnabled)
+        if (collision.gameObject.CompareTag("Slingshot") && collisionsEnabled && levelScript.shotsFired < 3)
         {
             canJump = false;
             inSlingshot = true;

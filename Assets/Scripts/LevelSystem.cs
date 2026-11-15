@@ -7,7 +7,7 @@ public class LevelSystem : MonoBehaviour
     public int towerPiecesLeft;
     public int spawnDelay;
     private int spawnTimer;
-    public int failTime;
+    public int failTime = 0;
     public int failTimer;
     public bool incrementFailTimer;
     public int level = 1;
@@ -30,8 +30,6 @@ public class LevelSystem : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
-
         // a delay is used to ensure everything has happened that needs to before a new tower is spawned
         if (towerPiecesLeft <= 1 && spawnTimer < spawnDelay)
         {
@@ -42,7 +40,6 @@ public class LevelSystem : MonoBehaviour
         {
             spawnTimer = 0;
             RespawnTower(); //respawn tower funcion gets called here.
-            Debug.Log("The next tower should be spawned now"); // [CODE TO SPAWN THE NEXT TOWER GOES HERE]
         }
 
         // increment the fail timer if player is about to fail
@@ -59,7 +56,7 @@ public class LevelSystem : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadSceneAsync(0);
-            Debug.Log("The player should go to the end screen now"); // basically this just loads the title screen and shows the cursor so the user can select the options.
+            // basically this just loads the title screen and shows the cursor so the user can select the options.
         }
 
         void RespawnTower()
