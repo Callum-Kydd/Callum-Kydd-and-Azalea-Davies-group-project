@@ -61,6 +61,11 @@ public class PlayerMovement : MonoBehaviour
                 firing = true;
                 collisionsEnabled = false;
                 collisionTimer = collisionCooldown;
+<<<<<<< Updated upstream
+=======
+                levelScript.shotsFired++;
+                levelScript.incrementFailTimer = false;
+>>>>>>> Stashed changes
             }
         }
 
