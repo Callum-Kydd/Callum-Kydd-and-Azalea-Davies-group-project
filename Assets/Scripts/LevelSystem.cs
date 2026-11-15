@@ -23,6 +23,7 @@ public class LevelSystem : MonoBehaviour
     void Start()
     {
         spawnTimer = 0;
+        shotsFired = 0;
         incrementFailTimer = false;
     }
 

@@ -14,9 +14,9 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         //prefabs cant hold references, so I find them here at runtime 
-        if (levelScript == null) levelScript = FindFirstObjectByType<LevelSystem>();
-        if (scoreScript == null) scoreScript = FindFirstObjectByType<ScoreSystem>();
-        
+        if (levelScript == null) levelScript = FindAnyObjectByType<LevelSystem>();
+        if (scoreScript == null) scoreScript = FindAnyObjectByType<ScoreSystem>();
+        if (highscoreScript == null) highscoreScript = FindAnyObjectByType<HighScoreSystem>();
 
         levelScript.towerPiecesLeft++;
     }
@@ -24,7 +24,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         // condition to destroy remaining tower pieces in preparation for spawning the next tower
-        if (levelScript.shotsFired == 3 && levelScript.towerPiecesLeft <= 1) // 1 instead of 0 just for a little bit more leniency
+        if (levelScript.shotsFired <= 3 && levelScript.towerPiecesLeft <= 1) // 1 instead of 0 just for a little bit more leniency
         {
             Destroy(gameObject);
         }

@@ -231,79 +231,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &251314982
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 329534747527160714, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_Name
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 9.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.603
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.70970845
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7044955
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270.422
-      objectReference: {fileID: 0}
-    - target: {fileID: 1142065716081555760, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3211346833487601147, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1293657182}
-    - target: {fileID: 3211346833487601147, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: levelScript
-      value: 
-      objectReference: {fileID: 1293657190}
-    - target: {fileID: 3211346833487601147, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: scoreScript
-      value: 
-      objectReference: {fileID: 1129438538}
-    - target: {fileID: 3211346833487601147, guid: a25c911115cb58046bd13967454670bb, type: 3}
-      propertyPath: player_script
-      value: 
-      objectReference: {fileID: 1293657183}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a25c911115cb58046bd13967454670bb, type: 3}
 --- !u!1 &290820951
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,7 +1949,7 @@ MonoBehaviour:
   value: 5
   scoreScript: {fileID: 1129438538}
   highscoreScript: {fileID: 0}
-  levelScript: {fileID: 1293657190}
+  levelScript: {fileID: 0}
 --- !u!1 &1234231881
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,8 +2101,6 @@ MonoBehaviour:
   slingshot_force: 3000
   orientation: {fileID: 702730604}
   slingshot: {fileID: 513768797}
-  scoreScript: {fileID: 1129438538}
-  levelScript: {fileID: 1293657190}
   collisionCooldown: 0.5
 --- !u!54 &1293657185
 Rigidbody:
@@ -2313,15 +2238,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelSystem
   shotsFired: 0
   towerPiecesLeft: 0
-  spawnDelay: 60
-  failTime: 180
+  spawnDelay: 0
+  failTime: 0
   failTimer: 0
   incrementFailTimer: 0
   level: 1
   score: 0
   highscore: 0
-  towerPrefab: {fileID: 2194370294720663872, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
-  towerSpawnPoint: {fileID: 1029206241}
+  towerPrefab: {fileID: 0}
+  towerSpawnPoint: {fileID: 0}
 --- !u!1 &2056386319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,7 +2409,6 @@ SceneRoots:
   - {fileID: 532522062}
   - {fileID: 1293657189}
   - {fileID: 394822946}
-  - {fileID: 251314982}
   - {fileID: 2549952002802190595}
   - {fileID: 600471149}
   - {fileID: 3302859}
