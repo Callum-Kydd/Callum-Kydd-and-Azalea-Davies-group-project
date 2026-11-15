@@ -2021,6 +2021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   value: 5
   scoreScript: {fileID: 1129438538}
+  highscoreScript: {fileID: 0}
   levelScript: {fileID: 1293657190}
 --- !u!1 &1234231881
 GameObject:
@@ -2317,6 +2318,8 @@ MonoBehaviour:
   failTimer: 0
   incrementFailTimer: 0
   level: 1
+  score: 0
+  highscore: 0
   towerPrefab: {fileID: 2194370294720663872, guid: 7b5409cdd3aa7064488fed656b933e28, type: 3}
   towerSpawnPoint: {fileID: 1029206241}
 --- !u!1 &2056386319
